@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Prediction App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🌦 Weather Prediction</h1>
+        <div class="weather-card">
+            <h2 id="location">Loading...</h2>
+            <p><strong>Temperature:</strong> <span id="temp">--</span></p>
+            <p><strong>Wind Speed:</strong> <span id="wind">--</span></p>
+            <p><strong>Humidity:</strong> <span id="humidity">--</span></p>
+            <p><strong>Condition:</strong> <span id="condition">--</span></p>
+        </div>
+
+        <button onclick="fetchWeather()">🔄 Refresh Weather</button>
+        <button id="speakWeather">🔊 Read Weather</button>
+        <button onclick="toggleDarkMode()">🌙 Dark Mode</button>
+        <button onclick="startListening()">🎙 Voice Command</button>
+
+        <label for="language">🌍 Select Language:</label>
+        <select id="language" onchange="changeLanguage(event)">
+            <option value="en-US">English</option>
+            <option value="hi-IN">हिन्दी</option>
+        </select>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
